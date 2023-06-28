@@ -1,0 +1,48 @@
+.project-container {
+    width: 100%;
+    transition: all 250ms linear;
+    flex-direction: column;
+    flex-shrink: 0;
+    flex-grow: 1;
+    padding: .5rem;
+}
+
+.project-container.show-2  {
+    width: 50%;
+}
+
+.project-container.show-3 {
+    width: calc(100%/3);
+}
+
+.project-container.show-4 {
+    width: calc(100%/4);
+}
+
+.project-container h2 {
+    color: #fff;
+    font-size: 1rem;
+    margin: .5rem 0 .5rem 0;
+}
+
+.project-image-small {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all .5s ease;
+    /*
+    filter: grayscale(80%);
+    pointer-events: auto;
+    */
+}
+
+.project-image-small img {
+    width: 100%;
+    transform: scale(1);
+    transition: all .5s ease;
+}
+
+.project-image-small:hover img {
+    transform: scale(1.1);
+}

@@ -1,0 +1,79 @@
+.background-container {
+    width: 100%;
+    height: calc(2*100vh);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.background-circle {
+    position: absolute;
+    filter: blur(8rem);
+}
+
+.circle-blue {
+    background-color: #516772;
+    width: 70rem;
+    height: 82rem;
+    border-radius: 50%;
+    /*
+    animation: scale-shape 15s ease infinite;
+    */
+}
+
+.blue-one {
+    top: -40%;
+    right: -30%;
+}
+
+.blue-two {
+    top: 60%;
+    left: -30%;
+}
+
+.circle-orange {
+    background-color: #AF733C;
+    width: 63rem;
+    height: 85rem;
+    border-radius: 50%;
+    /*
+    animation: scale-shape 10s ease infinite;
+    */
+}
+
+.orange-one {
+    top: -10%;
+    left: -30%;
+}
+
+.orange-two {
+    top: 70%;
+    left: 50%;
+}
+
+.circle-pink {
+    background-color: #C4A595;
+    width: 94.5rem;
+    height: 56rem;
+    border-radius: 50%;
+    top: 20%;
+    left: 20%;
+    transform: rotate(25deg);
+    /*
+    animation: scale-shape 20s ease infinite;
+    */
+}
+
+@keyframes scale-shape {
+    0% {
+        transform: scale(100%);
+    }
+    50% {
+        transform: scale(60%);
+    }
+    100% {
+        transform: scale(100%);
+    }
+}

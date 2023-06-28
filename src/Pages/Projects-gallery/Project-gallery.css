@@ -1,0 +1,39 @@
+.gallery-container {
+    background-color: rgba(242, 229, 217, 0.2);
+    position: relative;
+    z-index: 1;
+}
+
+.projects-container {
+    justify-content: space-between;
+    width: 87.5%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    z-index: 1;
+}
+
+.next-prev-arrows {
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.prev-arrow {
+    padding-right: 1.5rem;
+}
+
+.switch-opacity {
+    opacity: 0;
+}
+
+.switch-overflow {
+    overflow: visible;
+}

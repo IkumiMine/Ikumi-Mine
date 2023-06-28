@@ -1,0 +1,131 @@
+.projects-full-container {
+    width: 100vw !important;
+    background-color: #3B342C;
+    z-index: 3;
+    position: fixed;
+    top: calc(-50vh + 50%);
+    left: calc(-50vw + 50%);
+    transition: all 1s ease;
+    overflow-y: scroll;
+}
+
+.description-container {
+    width: 100%;
+    background-color: rgba(242, 229, 217, 0.9);
+    position: absolute;
+    bottom: 0;
+}
+
+.description-left {
+    width: 80%;
+    padding: 1.5rem 0 1.5rem 0;
+}
+
+.description-left h2 {
+    font-size: 1.8rem;
+}
+
+.description-left p {
+    margin: .6rem 0 .8rem 0;    
+}
+
+.description-left a {
+    color: #3B342C;
+    font-size: 1.2rem;
+}
+
+.project-number {
+    padding-right: 1rem;
+    font-size: 1rem;
+}
+
+.project-tech {
+    font-size: 1.2rem;
+}
+
+.project-links a:first-child {
+    margin-right: 1rem;
+}
+
+.website-link:hover,
+.github-link:hover {
+    border-bottom: 1px solid #3B342C;
+}
+
+.description-right {
+    position: relative;
+    width: 20%;
+}
+
+.button-black {
+    display: inline-block;
+    width: 6.6rem;
+    height: 4.25rem;
+    background-color: #3B342C;
+    padding: 1.3rem 1rem 1rem 1.5rem;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+
+.back-text {
+    text-transform: uppercase;
+    vertical-align: middle;
+}
+
+#arrow-up {
+    vertical-align: middle;
+    font-size: 1.1rem;
+}
+
+.projects-full-container.open {
+    animation: slidein 1s ease-in-out;
+}
+
+.projects-full-container.close {
+    animation: slideout 1s ease-in-out;
+}
+
+@media screen and (max-width: 500px) {
+    .description-inside-container {
+        flex-direction: column;
+    }
+
+    .description-left {
+        width: 100%;
+    }
+
+    .description-right {
+        width: 100%;
+        height: 6rem;
+        margin-bottom: 1rem;
+    }
+
+    .button-black {
+        left: 0;
+    }
+}
+
+/* Animation */
+@keyframes slidein {
+    0% {
+        opacity: 0;
+        top: calc(-50vh + 400%);
+    }
+    100% {
+        opacity: 1;
+        top: calc(-50vh + 50%);
+    }
+}
+
+@keyframes slideout {
+    0% {
+        opacity: 1;
+        top: calc(-50vh + 50%);
+    }
+    100% {
+        opacity: 0;
+        top: calc(-50vh + 400%);
+    }
+}

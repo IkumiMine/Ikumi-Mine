@@ -1,24 +1,45 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState, useEffect } from 'react';
 
-function App() {
+import Introduction from './Pages/Introduction';
+import ProjectsGellery from './Pages/Projects-gallery';
+import Background from './Components/Background';
+import Navigation from './Components/Navigation';
+import ProjectsDetails from './Data';
+
+import './root.css';
+
+const App = () => {
+
+  //get data
+  const [details, setDetails] = useState([]);
+
+  useEffect(() => {
+      setDetails(ProjectsDetails);
+  }, []);
+
+  //scroll functions
+  const scrollToProjects = () => {
+    const eltProjects = document.getElementById('projects');
+    if(eltProjects){
+      eltProjects.scrollIntoView({ behavior: 'smooth'});
+    }
+  };
+
+  const scrollToAbout = () => {
+    const eltAbout = document.getElementById('about');
+    if(eltAbout){
+      eltAbout.scrollIntoView({ behavior: 'smooth'});
+    }
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main>
+      <Navigation scrollToProjects={scrollToProjects} scrollToAbout={scrollToAbout}/>
+      <Background />
+
+      <Introduction scrollToProjects={scrollToProjects} />
+      <ProjectsGellery details={details} scrollToProjects={scrollToProjects} scrollToAbout={scrollToAbout} />
+    </main>      
   );
 }
 
