@@ -2,15 +2,12 @@
     width: 100%;
     height: calc(2*100vh);
     position: absolute;
-    top: 0;
-    left: 0;
     z-index: -1;
-    overflow: hidden;
 }
 
 .background-circle {
     position: absolute;
-    filter: blur(8rem);
+    filter: blur(2.5rem);
 }
 
 .circle-blue {
@@ -63,6 +60,24 @@
     transform: rotate(25deg);
     /*
     animation: scale-shape 20s ease infinite;
+    */
+}
+
+@media screen and (max-width: 460px) {
+    /*
+    .circle-blue {
+        width: 5rem;
+        height: 10rem;
+    }
+
+    .circle-orange {
+        width: 10rem;
+        height: 5rem;
+    }
+    .circle-pink {
+        width: 5rem;
+        height: 10rem;
+    }
     */
 }
 
