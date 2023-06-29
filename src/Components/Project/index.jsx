@@ -4,26 +4,26 @@ import ProjectsFull from '../../Pages/Projects-full';
 import './Project.css';
 
 const Project = ({ detail, scrollToProjects, scrollToAbout, currentIndex, carouselCountDisplay, screenWidth }) => {
-    const { number, name, image, id } = detail;
 
-    //set useState
+    const { number, name, image, id } = detail;
     const [modal, setModal] = useState(false);
     const [animation, setAnimation] = useState('open');
     const navEl = document.getElementById("nav");
-    const proEl = document.getElementById("switch-overflow");
 
     /* Reference: https://erikmartinjordan.com/react-on-disappear-animation */
     //function to open modal
     const handleAnimationOpen = () => {
         setAnimation('open');
-        setModal(true);
+
+        setTimeout(() => {
+            setModal(true);
+        }, 1000)
 
         //adjust navigation and body styles
         setTimeout(() => {
             navEl.classList.add("go-back");
-            proEl.classList.add("switch-overflow");
             document.body.classList.add("hide-elements");
-        }, 520)
+        }, 500)
     }
 
     //function to close modal
@@ -33,9 +33,8 @@ const Project = ({ detail, scrollToProjects, scrollToAbout, currentIndex, carous
         //adjust navigation and body styles
         setTimeout(()=>{
             navEl.classList.remove("go-back");
-            proEl.classList.remove("switch-overflow");
             document.body.classList.remove("hide-elements");
-        },520)
+        },500)
 
         setTimeout(() => {
             setModal(false);

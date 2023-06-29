@@ -22,7 +22,7 @@ const App = () => {
   const getCurrentWidth = () => {
     setScreenWidth(window.innerWidth);
   }
-
+  
   useEffect(()=> {
       window.addEventListener('resize', getCurrentWidth);
   }, [screenWidth]);
@@ -30,11 +30,6 @@ const App = () => {
   //scroll functions
   const scrollToProjects = () => {
     const eltProjects = document.getElementById('projects');
-    /*
-    const projectsRect = eltProjects.getBoundingClientRect();
-    let x = projectsRect.x;
-    console.log(x);
-    */
     if(eltProjects){
       eltProjects.scrollIntoView({ behavior: 'smooth'});
     }

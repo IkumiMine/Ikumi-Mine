@@ -90,7 +90,6 @@ const ProjectsGellery = ({ details, scrollToProjects, scrollToAbout, screenWidth
                 className='flex projects-container' 
                 onTouchStart={handleTouchStart}
                 onTouchMove={handleTouchMove}
-                id="switch-overflow"
             >
                 {details.map((detail, index) => (
                     <Project 
