@@ -3,7 +3,7 @@ import ProjectsFull from '../../Pages/Projects-full';
 
 import './Project.css';
 
-const Project = ({ detail, scrollToProjects, scrollToAbout, currentIndex, carouselCountDisplay }) => {
+const Project = ({ detail, scrollToProjects, scrollToAbout, currentIndex, carouselCountDisplay, screenWidth }) => {
     const { number, name, image, id } = detail;
 
     //set useState
@@ -65,6 +65,7 @@ const Project = ({ detail, scrollToProjects, scrollToAbout, currentIndex, carous
                                     detail={detail} 
                                     handleAnimationClose={handleAnimationClose} 
                                     scrollToAbout={scrollToAbout}
+                                    screenWidth={screenWidth}
                         />}
         </>
     )

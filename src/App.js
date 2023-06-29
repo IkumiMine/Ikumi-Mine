@@ -10,16 +10,31 @@ import './root.css';
 
 const App = () => {
 
-  //get data
   const [details, setDetails] = useState([]);
+  const [screenWidth, setScreenWidth] = useState(0);
 
+  //set data
   useEffect(() => {
       setDetails(ProjectsDetails);
   }, []);
 
+  //get screen width whenever it's changed
+  const getCurrentWidth = () => {
+    setScreenWidth(window.innerWidth);
+  }
+
+  useEffect(()=> {
+      window.addEventListener('resize', getCurrentWidth);
+  }, [screenWidth]);
+
   //scroll functions
   const scrollToProjects = () => {
     const eltProjects = document.getElementById('projects');
+    /*
+    const projectsRect = eltProjects.getBoundingClientRect();
+    let x = projectsRect.x;
+    console.log(x);
+    */
     if(eltProjects){
       eltProjects.scrollIntoView({ behavior: 'smooth'});
     }
@@ -38,7 +53,12 @@ const App = () => {
       <Background />
 
       <Introduction scrollToProjects={scrollToProjects} />
-      <ProjectsGellery details={details} scrollToProjects={scrollToProjects} scrollToAbout={scrollToAbout} />
+      <ProjectsGellery 
+        details={details} 
+        scrollToProjects={scrollToProjects} 
+        scrollToAbout={scrollToAbout}
+        screenWidth={screenWidth} 
+      />
     </main>      
   );
 }

@@ -31,10 +31,6 @@
     cursor: pointer;
     overflow: hidden;
     transition: all .5s ease;
-    /*
-    filter: grayscale(80%);
-    pointer-events: auto;
-    */
 }
 
 .project-image-small img {
@@ -45,4 +41,10 @@
 
 .project-image-small:hover img {
     transform: scale(1.1);
+}
+
+@media screen and (max-width: 460px) {
+    .project-image-small:hover img {
+        transform: none;
+    }
 }

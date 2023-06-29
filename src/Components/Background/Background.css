@@ -3,6 +3,7 @@
     height: calc(2*100vh);
     position: absolute;
     z-index: -1;
+    overflow: hidden;
 }
 
 .background-circle {
@@ -15,9 +16,6 @@
     width: 70rem;
     height: 82rem;
     border-radius: 50%;
-    /*
-    animation: scale-shape 15s ease infinite;
-    */
 }
 
 .blue-one {
@@ -35,9 +33,6 @@
     width: 63rem;
     height: 85rem;
     border-radius: 50%;
-    /*
-    animation: scale-shape 10s ease infinite;
-    */
 }
 
 .orange-one {
@@ -58,37 +53,4 @@
     top: 20%;
     left: 20%;
     transform: rotate(25deg);
-    /*
-    animation: scale-shape 20s ease infinite;
-    */
-}
-
-@media screen and (max-width: 460px) {
-    /*
-    .circle-blue {
-        width: 5rem;
-        height: 10rem;
-    }
-
-    .circle-orange {
-        width: 10rem;
-        height: 5rem;
-    }
-    .circle-pink {
-        width: 5rem;
-        height: 10rem;
-    }
-    */
-}
-
-@keyframes scale-shape {
-    0% {
-        transform: scale(100%);
-    }
-    50% {
-        transform: scale(60%);
-    }
-    100% {
-        transform: scale(100%);
-    }
 }

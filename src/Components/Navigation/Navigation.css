@@ -43,7 +43,7 @@
 
     .nav-list {
         flex-direction: column;
-        justify-content:space-around;
+        justify-content:space-evenly;
         position: absolute;
         right: 0;
         width: 0;
@@ -51,6 +51,7 @@
         transition: all .5s ease;
         gap: 1rem;
         font-size: 1.6rem;
+        text-align: center;
         background-color:#3B342C;
     }
 

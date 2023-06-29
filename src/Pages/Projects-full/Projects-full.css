@@ -1,5 +1,6 @@
 .projects-full-container {
     width: 100vw !important;
+    height: 100%;
     background-color: #3B342C;
     z-index: 3;
     position: fixed;
@@ -7,6 +8,7 @@
     left: calc(-50vw + 50%);
     transition: all 1s ease;
     overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 .description-container {
@@ -14,6 +16,7 @@
     background-color: rgba(242, 229, 217, 0.9);
     position: absolute;
     bottom: 0;
+    overflow-y: scroll;
 }
 
 .description-left {
@@ -80,10 +83,12 @@
 }
 
 .projects-full-container.open {
+    -webkit-animation: slidein 1s ease-in-out;
     animation: slidein 1s ease-in-out;
 }
 
 .projects-full-container.close {
+    -webkit-animation: slideout 1s ease-in-out;
     animation: slideout 1s ease-in-out;
 }
 
@@ -106,6 +111,18 @@
         left: 0;
     }
 }
+
+@media screen and (max-width: 460px) {
+    .description-container {
+        height: 100%;
+        background-color: #f2e5d9;
+    }
+
+    .description-inside-container {
+        margin: 5rem auto 0 auto !important;
+    }
+}
+
 
 /* Animation */
 @keyframes slidein {

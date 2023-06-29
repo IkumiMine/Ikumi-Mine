@@ -2,27 +2,16 @@ import { useState, useEffect, useReducer } from 'react';
 import Project from '../../Components/Project';
 import './Project-gallery.css';
 
-const ProjectsGellery = ({ details, scrollToProjects, scrollToAbout }) => {
+const ProjectsGellery = ({ details, scrollToProjects, scrollToAbout, screenWidth }) => {
 
     /*Reference: https://dev.to/rakumairu/simple-react-carousel-24m0 */
     const [currentIndex, setCurrentIndex] = useState(0);
     const [length, setLength] = useState(details.length);
-    const [screenWidth, setScreenWidth] = useState(0);
     const [touchPosition, setTouchPosition] = useState(null);
     let show, carouselCountDisplay;
     const detail = "";
 
-    //Adjust carousel count
-    //set screem width
-    const getCurrentWidth = () => {
-        setScreenWidth(window.innerWidth);
-    }
-
-    //get screen width whenever it's changed
-    useEffect(()=> {
-        window.addEventListener('resize', getCurrentWidth);
-    }, [screenWidth]);
-
+    //Adjust carousel count by screenwidth
     //change show number depends on screen width
     if(screenWidth <= 2000 && screenWidth > 768) {
         show = 4;
@@ -112,6 +101,7 @@ const ProjectsGellery = ({ details, scrollToProjects, scrollToAbout }) => {
                         currentIndex={currentIndex}
                         show={show}
                         carouselCountDisplay={carouselCountDisplay}
+                        screenWidth={screenWidth}
                     />
                 ))}
             </div>
