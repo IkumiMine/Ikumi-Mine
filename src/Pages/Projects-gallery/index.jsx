@@ -1,4 +1,4 @@
-import { useState, useEffect, useReducer } from 'react';
+import { useState, useEffect } from 'react';
 import Project from '../../Components/Project';
 import './Project-gallery.css';
 
@@ -9,7 +9,6 @@ const ProjectsGellery = ({ details, scrollToProjects, scrollToAbout, screenWidth
     const [length, setLength] = useState(details.length);
     const [touchPosition, setTouchPosition] = useState(null);
     let show, carouselCountDisplay;
-    const detail = "";
 
     //Adjust carousel count by screenwidth
     //change show number depends on screen width
@@ -33,6 +32,7 @@ const ProjectsGellery = ({ details, scrollToProjects, scrollToAbout, screenWidth
     },[details]);
 
     const next = () => {
+        console.log("next");
         if(currentIndex < (length - show)) {
             setCurrentIndex(prevState => prevState + 1)
         }

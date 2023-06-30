@@ -36,6 +36,10 @@
 
 @media screen and (max-width: 460px) {
     .navigation-dark-container {
+        -webkit-transition: all .5s ease-in-out;
+        -moz-transition: all .5s ease-in-out;
+        -o-transition: all .5s ease-in-out;
+        -ms-transition: all .5s ease-in-out;
         transition: all .5s ease-in-out;
     }
 
@@ -49,21 +53,25 @@
 
     .nav-dark-list {
         flex-direction: column;
-        justify-content: space-around;
+        justify-content: space-evenly;
         position: absolute;
-        right: 0;
-        width: 0;
+        top: -500px;
+        left: 0;
+        width: 100vw;
         height: 0;
-        transition: all .5s ease;
         gap: 1rem;
         font-size: 1.6rem;
         background-color:#3B342C;
+        -webkit-transition: all .5s ease-in-out;
+        -moz-transition: all .5s ease-in-out;
+        -o-transition: all .5s ease-in-out;
+        -ms-transition: all .5s ease-in-out;
+        transition: all .5s ease-in-out;
     }
 
     .nav-dark-left {
         flex-direction: column;
         gap: 1rem;
-        width: 0;
     }
 
     .nav-dark-left li a{
@@ -72,8 +80,6 @@
 
     .nav-dark-right {
         gap: .6rem;
-        margin-top: .2rem;
-        width: 0;
     }
 
     .nav-dark-icon a {
@@ -89,16 +95,8 @@
     }
 
     .nav-dark-list.active-dark {
-        width: 100vw;
+        top: 4rem;
         height: 100vh;
-    }
-
-    .nav-dark-left.active-dark {
-        width: 100%;
-    }
-
-    .nav-dark-right.active-dark {
-        width: 100%;
     }
 
     .nav-dark-left li:first-child,

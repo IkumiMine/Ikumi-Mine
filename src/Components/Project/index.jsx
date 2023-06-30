@@ -17,7 +17,7 @@ const Project = ({ detail, scrollToProjects, scrollToAbout, currentIndex, carous
 
         setTimeout(() => {
             setModal(true);
-        }, 1000)
+        }, 800)
 
         //adjust navigation and body styles
         setTimeout(() => {
@@ -38,14 +38,17 @@ const Project = ({ detail, scrollToProjects, scrollToAbout, currentIndex, carous
 
         setTimeout(() => {
             setModal(false);
-        },1000)
+        },800)
     }
 
     return (
         <>
             <div 
                 className={`project-container ${carouselCountDisplay}`}
-                style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+                style={{
+                    WebkitTransform:  `translateX(-${currentIndex * 100}%)`,
+                    transform: `translateX(-${currentIndex * 100}%)`
+                }}
             >
                 <h2>{number}</h2>
                 <div 

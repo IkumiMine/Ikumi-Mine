@@ -6,13 +6,19 @@
     position: fixed;
     top: calc(-50vh + 50%);
     left: calc(-50vw + 50%);
-    -webkit-transition: all 1s ease;
-    -moz-transition: all 1s ease;
-    -o-transition: all 1s ease;
-    -ms-transition: all 1s ease;
-    transition: all 1s ease;
+    -webkit-transition: all .8s ease;
+    -moz-transition: all .8s ease;
+    -o-transition: all .8s ease;
+    -ms-transition: all .8s ease;
+    transition: all .8s ease;
     overflow-y: scroll;
     overflow-x: hidden;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.projects-full-container::-webkit-scrollbar {
+    display: none;
 }
 
 .description-container {
@@ -86,19 +92,19 @@
 }
 
 .projects-full-container.open {
-    -webkit-animation: slidein 1s ease-in-out;
-    -moz-animation: slidein 1s ease-in-out;
-    -ms-animation: slidein 1s ease-in-out;
-    -o-animation: slidein 1s ease-in-out;
-    animation: slidein 1s ease-in-out;
+    -webkit-animation: slidein .8s ease-in-out;
+    -moz-animation: slidein .8s ease-in-out;
+    -ms-animation: slidein .8s ease-in-out;
+    -o-animation: slidein .8s ease-in-out;
+    animation: slidein .8s ease-in-out;
 }
 
 .projects-full-container.close {
-    -webkit-animation: slideout 1s ease-in-out;
-    -moz-animation: slideout 1s ease-in-out;
-    -ms-animation: slideout 1s ease-in-out;
-    -o-animation: slideout 1s ease-in-out;
-    animation: slideout 1s ease-in-out;
+    -webkit-animation: slideout .8s ease-in-out;
+    -moz-animation: slideout .8s ease-in-out;
+    -ms-animation: slideout .8s ease-in-out;
+    -o-animation: slideout .8s ease-in-out;
+    animation: slideout .8s ease-in-out;
 }
 
 @media screen and (max-width: 500px) {
