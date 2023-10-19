@@ -5,10 +5,10 @@ const ProjectsFull = ({ handleAnimationClose, detail, animation, scrollToAbout, 
     const { number, name, description, tech, image, webUrl, gitUrl, year } = detail;
     const styles = {
         bgImage: {
-            backgroundImage: screenWidth <= 460 ? "unset" : `url("${image}")`,
-            backgroundRepeat: screenWidth <= 460 ? "unset" : "no-repeat",
-            backgroundSize: screenWidth <= 460 ? "unset" : "cover",
-            backgroundPositionX: screenWidth <= 460 ? "unset" : "center"
+            backgroundImage: `url("${image}")`,
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "cover",
+            backgroundPositionX: "center"
         }
     }
     
