@@ -22,6 +22,10 @@ const App = () => {
   const getCurrentWidth = () => {
     setScreenWidth(window.innerWidth);
   }
+
+  useEffect(()=> {
+    window.addEventListener('load', getCurrentWidth);
+}, [screenWidth]);
   
   useEffect(()=> {
       window.addEventListener('resize', getCurrentWidth);
